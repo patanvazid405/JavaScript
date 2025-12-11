@@ -14,13 +14,7 @@ for(let i=0;i<5;i++){
 
 //right triangle
 
-for(let i=0;i<6;i++){
-    let str=""
-    for(let j=0;j<1+i;j++){
-        str+=" *"
-    }
-    console.log(str)
-}
+ZS
 
 //reverse right triangle
 for(let i =0;i<6;i++){
@@ -32,10 +26,12 @@ for(let i =0;i<6;i++){
 }
 
 
+
+
 //Triangle using js
 for(let i=0;i<5;i++){
     st = ""
-    for(let k=0;k<5-i;k++){
+    for(let k=0;k<4-i;k++){
         st+=" "
     }
     for(let j=0;j<1+i;j++){
@@ -59,3 +55,15 @@ for(let i=0;i<5;i++){
 
 
 
+
+//recap pattern
+for(let i =0;i<5;i++){
+    strs =""
+    for(let k=0;k<4-i;k++){
+        strs+=" "
+    }
+    for(let j=0;j<1+i;j++){
+        strs+=" *"
+    }
+    console.log(strs)
+}

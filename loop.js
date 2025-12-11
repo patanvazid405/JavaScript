@@ -54,6 +54,19 @@ for (let i=0;i<5;i++){
   console.log(stars)
 }
 
+//FOR OF -> VALUES
+let arr = [10, 20, 30];
+for (let x of arr) {
+  console.log(x);
+}
+// for in -> index
+for (let x in arr) {
+  console.log(x);
+}
+
+
+
+
 
 
 
