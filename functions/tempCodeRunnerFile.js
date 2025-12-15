@@ -1,4 +1,11 @@
-function juice(name,ingred = "sugar"){
-    console.log(`making ${name} juice with ${ingred}`)
+function child(){
+    console.group("I'm Outside")
 }
-juice("watermelon","honey")
+
+function parent(a){
+    console.log("Where are you ?")
+    a()
+
+}
+
+parent(child)

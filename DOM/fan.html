@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+
+<body>
+<center>
+
+    <img id="img" src="./Screenshot 2025-12-15 162812.png" alt=""><br><br>
+
+    <button onclick="Rot()">Turn on</button>
+    <button onclick="Off()" >Turn off</button>
+
+</center>
+
+<script>
+    function Rot() {
+        document.getElementById("img").src =
+        "https://i.pinimg.com/originals/36/91/f9/3691f948ef62738ea8badaeaff48fb92.gif";
+    }
+
+    function Off(){
+        document.getElementById("img").src="https://img.freepik.com/free-vector/vintage-electric-fan-isolated-white-background_1308-65958.jpg?semt=ais_hybrid&w=740&q=80"
+    }
+</script>
+
+</body>
+</html>
