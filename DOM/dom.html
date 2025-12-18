@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello coder</h1>
+    <h1>Hello coder</h1>
+    <p id="p" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dolorem explicabo nam voluptatum repellendus perspiciatis hic saepe ipsa animi eaque in a aliquam at sapiente, odio aut laboriosam cum? Odio.</p>
+    <button id = "but" onclick="changeText()">Click me</button>
+
+    <br>
+    <p class="para">Welcome to Hyderabad</p>
+    <p class="para">Welcome to Hyderabad</p>
+
+    <script>
+        function changeText(){
+            let a = document.getElementById("but")
+            let b = document.getElementById("p")
+            b.innerHTML = "Helo vazid welcome to TCS"
+            b.style.color= "green"
+            b.style.fontSize = "20px"
+        }
+        //getElementsByTagName
+        let ele = document.getElementsByTagName("h1")
+        ele[0].style.background = "gold"
+        ele[1].innerText = "Java Script"
+
+        // getElementsByClassName
+        let par = document.getElementsByClassName("para")
+        par[1].innerHTML =  "welcome to hiTech city"
+
+        //querySelector -> single element
+        console.log(document.querySelector("#p").innerHTML = "Bye 2025")
+
+        //querySelectorAll -> like Array
+        console.log(document.querySelectorAll(".para"))
+    </script>
+</body>
+</html>

@@ -4,16 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        img{
+            height: 350px;
+            width: 350px;
+        }
+        button{
+            padding: 10px;
+            background-color: deeppink;
+            border-radius: 4px;
+            border: 1px solid deeppink;
+            color: white;
+            font-size: medium;
+            box-shadow:  2px 2px 3px 3px black;
+        }
+    </style>
 </head>
 <body>
-    <img src="https://aapkabazar.co/_next/image?url=https%3A%2F%2Fimage.aapkabazar.co%2Fproduct%2F2244%2F1671979252214.png&w=3840&q=75" alt="" height="300px" width="350px">
-    <button id="plus" onclick="Increment()">+</button> 1 <button id="min">-</button>
+    <img src="./Screenshot 2025-12-18 223524.png" alt="" style="height:110px;  width: 100px;">
+    <h1>Head or Tails</h1>
+    <p>Flip a virtual coin with this online and free app.</p>
+    <p id="pa">Heads: 0 Tails: 0</p>
+    <img id="img" src="https://flipsimu.com/static/coin-image-big-b4e8096a3ec8ecc2b96d5998f19bda6c.png" alt="">
+    <button id="but" onclick="rand()">Flip the Coin!</button>
 
     <script>
-        function Increment(){
+        let img = document.getElementById("img")
+        let para = document.getElementById("pa")
 
+        let head = 0
+        let toss = 0
+
+        function rand(){
+        let rand =  Math.round(Math.random()*100)
+        console.log(rand)
+        if (rand%2 ==0){
+            img.src = "https://romjee.com/cdn/shop/files/HEAD-TAIL-TOSSING-COIN-1.jpg?height=533&v=1718558075"
+            head = head+1
+            
         }
-
+        else{
+            img.src = "https://romjee.com/cdn/shop/files/HEAD-TAIL-TOSSING-COIN.jpg?v=1718558075"
+            toss = toss+1
+        }
+        para.textContent = "Heads: " + head + " Tails: " + toss
+        }
     </script>
+
 </body>
 </html>

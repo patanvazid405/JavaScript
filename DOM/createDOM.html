@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Web Page</title>
+</head>
+<body>
+    <script>
+        // Creating H1 tag using JS
+        let h1 = document.createElement("h1")
+        h1.innerText = "Hi I'm Python Developer"
+        document.body.append(h1)
+
+        //Creating Paragraph Tag using JS
+        let para =   document.createElement("p")
+        para.innerHTML = "Hello Im vazid. full stack developer. I know python,SQL,JavaScript,HTML,CSS,PowerBI"
+        document.body.append(para)
+
+
+         //Creating Img using js
+        let img = document.createElement("img")
+        img.src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
+        document.body.append(img)
+
+        //Creating Button using JS
+        let but_el = document.createElement("Button")
+        but_el.innerHTML = "Click me!" 
+        document.body.append(but_el)
+        but_el.onclick = function click(){
+            document.body.removeChild(img)
+        }
+    
+        // document.body.append(h1,para,img,but_ele)  //-> One line append into browser
+
+    </script>
+</body>
+</html>
