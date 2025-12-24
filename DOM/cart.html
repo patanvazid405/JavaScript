@@ -27,6 +27,9 @@
             font-size: medium;
             box-shadow:  2px 2px 3px 3px black;
         }
+        button:hover{
+            cursor:grab;
+        }
     </style>
 </head>
 <body>
@@ -35,7 +38,7 @@
     <p>Flip a virtual coin with this online and free app.</p>
     <p id="pa">Heads: 0 Tails: 0</p>
     <img id="img" src="https://flipsimu.com/static/coin-image-big-b4e8096a3ec8ecc2b96d5998f19bda6c.png" alt="">
-    <button id="but" onclick="rand()">Flip the Coin!</button>
+    <button id="but" onclick="rand(),sound()">Flip the Coin!</button>
 
     <script>
         let img = document.getElementById("img")
@@ -43,6 +46,8 @@
 
         let head = 0
         let toss = 0
+
+    
 
         function rand(){
         let rand =  Math.round(Math.random()*100)

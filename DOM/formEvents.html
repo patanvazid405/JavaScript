@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <form>
+        <span></span>
+        <input type="text" placeholder="Enter name">
+        <span></span>
+        <input type="email" placeholder="Enter email">
+        <select name="" id="">
+            <option value="">Male</option>
+            <option value="">Female</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    
+    <script>
+        //prevent default 
+        let form = document.querySelector("form")
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+            console.log("Submitted...")
+        })
+
+        //blur -> trigger when come out from that field
+        let form_el =document.querySelectorAll("input")
+        let span =document.querySelectorAll("span")
+        form_el[0].addEventListener("blur",function(event){
+            if (event.target.value.length < 3){
+                span[0].innerHTML = "Please enter a valid name"
+                span[0].style.color ="red"
+            }  
+        })
+
+        //focus ->trigger when enter into the input field
+        form_el[1].addEventListener("focus",function(event){
+            span[1].innerHTML = "Must be 8 characters"
+            if (event.target.value.length == 8){
+                span[1].innerHTML = ""
+            }
+            span[1].style.color = "red"
+        })
+
+        // change ->.particularly used for change in options
+        let change = document.querySelector("select")
+        change.addEventListener("change",function(event){
+            console.log("Change event Trigged")
+        })
+
+    </script>
+</body>
+</html>

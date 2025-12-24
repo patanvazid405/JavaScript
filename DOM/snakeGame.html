@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Game</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #snake-container {
+      height: 700px;
+      width: 800px;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    #snake {
+      height: 80px;
+      width: 70px;
+      background-color: green;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="snake-container">
+    <div id="snake"></div>
+  </div>
+
+  <script>
+    let left = 0
+    let top = 0
+    let step = 10
+
+    const container = document.getElementById("snake-container")
+    const snake = document.getElementById("snake")
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowRight") left += step
+      else if (event.key === "ArrowLeft") left -= step
+      else if (event.key === "ArrowUp") top -= step
+      else if (event.key === "ArrowDown") top += step
+
+      snake.style.left = left + "px"
+      snake.style.top = top + "px"
+    })
+  </script>
+</body>
+</html>

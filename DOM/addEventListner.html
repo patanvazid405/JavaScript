@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event Listener</title>
+</head>
+<body>
+    <!--AddEventListeners-->
+    <!--1. Inline Event Listener-->
+    <!-- 2. OnEvent Listener -->
+    <!-- 3.AddEventListeners -->
+
+    <!-- <h1 onclick="click()">Event Listeners</h1>    inline event -->
+    <h1>Event Listeners</h1>
+
+
+    <script>
+        // 2. OnEvent Listener
+        // let but = document.createElement("button")
+        // but.innerHTML = "click"
+        // document.body.append(but)
+        // but.onclick = function(){
+        //     document.body.style.background = "yellow"
+        //     document.body.style.color = "blue"
+        // }
+
+        // 3.Add Event Listener
+        let but = document.createElement("button")
+        but.innerHTML = "click"
+        document.body.append(but)
+        but.addEventListener("mouseover",function(){   //click,dblclick,mouseover,keydown,keyup,mouse out,mouse move
+            document.body.style.background = "yellow"
+            document.body.style.color = "blue"
+
+        })
+
+        
+        
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette</title>
+    <style>
+
+        .container{
+            height: 900px;
+            width: 1000px;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2px;
+            align-items: baseline;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Palette</h1>
+    <button onclick="Color('red')">Red</button>
+        <button onclick="Color('green')">Green</button>
+        <button onclick="Color('yellow')">Yellow</button>
+        <button onclick="Color('skyblue')">skyblue</button> <br><br>
+    <div class="container">
+        
+    </div>
+
+    <script>
+        let parent = document.getElementsByClassName("container")[0]
+        function Color(color){
+            let card = document.createElement("div")
+            let but = document.createElement("button")
+            but.innerHTML = "X"
+            but.onclick = function(){
+                parent.removeChild(card)
+            }
+            card.style.height = "150px"
+            card.style.width = "150px"
+            card.style.backgroundColor = color
+            card.style.margin = "2px"
+            parent.append(card)
+            card.append(but)
+
+        }
+        
+        
+    </script>
+</body>
+</html>

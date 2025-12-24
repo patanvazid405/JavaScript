@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Attributes</title>
+</head>
+
+<body>
+    <div class="parent">
+        <h1>Hello</h1>
+    </div>
+    <script>
+
+        let parent_el = document.querySelector(".parent") 
+
+        let h1 = document.getElementsByTagName("h1")
+        h1[0].setAttribute("id", "heading")
+
+        let img_el = document.createElement("img")
+        img_el.setAttribute("src", "https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80")
+
+        parent_el.append(img_el)
+
+    </script>
+</body>
+
+</html>
