@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Application</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            height: 300px;
+            width: 500px;
+            border:2px solid black;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+        }
+        button{
+            height: 50px;
+            width: 70px;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Counter Application</h2>
+        <br>
+        <button id="left">-</button>     <span id="counter">0 </span>    <button id="right">+</button>
+    </div>
+
+    <script>
+        let count = 0
+        let leftBtn  = document.getElementById("left")
+        let Num = document.getElementById("counter")
+        console.log(leftBtn)
+        leftBtn.addEventListener("click",function(event){
+            count-=1
+            Num.innerHTML = count
+
+        })
+        let rightBtn  = document.getElementById("right")
+        rightBtn.addEventListener("click",function(event){
+            count+=1
+            Num.innerHTML = count
+
+        })
+
+    </script>
+</body>
+</html>

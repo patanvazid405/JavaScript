@@ -19,38 +19,80 @@
     }
 
     #snake {
-      height: 80px;
+      height: 20px;
       width: 70px;
       background-color: green;
       position: absolute;
-      top: 0;
-      left: 0;
+      border-top-left-radius:50% ;
+      border-bottom-left-radius:50% ;
+    }
+    
+    #black{
+      height: 20px;
+      width: 20px;
+      background-color: black;
+      margin-left: 70px;
+      border-top-right-radius:50% ;
+      border-bottom-right-radius:50% ;
     }
   </style>
 </head>
 
 <body>
   <div id="snake-container">
-    <div id="snake"></div>
+    <div id="snake">
+      <div id="black"></div>
+    </div>
   </div>
 
   <script>
-    let left = 0
-    let top = 0
-    let step = 10
+    let left = 0;
+    let high = 0;
 
-    const container = document.getElementById("snake-container")
-    const snake = document.getElementById("snake")
+    const container = document.getElementById("snake-container");
+    const snake = document.getElementById("snake");
+
+    let but = document.createElement("div")
+    let heightBuble = Math.floor(Math.random()*600)
+    let widthBuble = Math.floor(Math.random()*700)
+    but.style.position = "absolute";
+    but.style.left = heightBuble+"px"
+    but.style.top = widthBuble+"px"
+    but.style.height= "30px"
+    but.style.width= "30px"
+    but.style.backgroundColor ="red"
+    but.style.borderRadius = "50%"
+    container.appendChild(but)
 
     document.addEventListener("keydown", function (event) {
-      if (event.key === "ArrowRight") left += step
-      else if (event.key === "ArrowLeft") left -= step
-      else if (event.key === "ArrowUp") top -= step
-      else if (event.key === "ArrowDown") top += step
-
-      snake.style.left = left + "px"
-      snake.style.top = top + "px"
+      console.log(event.key)
+      if (event.key == "ArrowRight"){
+        if (left <= 800 - 90){
+          left+=10
+        }
+      }
+      else if(event.key =="ArrowLeft"){
+        if (left > 0){
+            left-=10
+        }
+          
+      }
+      else if(event.key == "ArrowUp"){
+        if (high > 0){
+            high-=10
+        }
+        
+      }
+      else if (event.key == "ArrowDown"){
+        if (high <= 700 - 90){
+        high+=10
+      }
+      }
+      snake.style.left = left+"px"
+      snake.style.top = high+"px"
     })
+    
+      
   </script>
 </body>
 </html>

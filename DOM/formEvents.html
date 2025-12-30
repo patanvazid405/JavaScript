@@ -39,9 +39,8 @@
 
         //focus ->trigger when enter into the input field
         form_el[1].addEventListener("focus",function(event){
-            span[1].innerHTML = "Must be 8 characters"
             if (event.target.value.length == 8){
-                span[1].innerHTML = ""
+                span[1].innerHTML = "Must be 8 characters"
             }
             span[1].style.color = "red"
         })

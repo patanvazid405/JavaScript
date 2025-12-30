@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List Application</title>
+    <style>
+         .item-list{
+            height: 500px;
+            width: 600px;
+            border: 2px solid black;
+
+        }
+    </style>
+   
+</head>
+
+<body>
+    <h1>ToDo List</h1>
+
+    <span><input type="text"></span>
+    <button onclick="Add()">Add</button>
+    <br>
+    <br>
+    <div class="item-list">
+
+    </div>
+
+    <script>
+        let el = document.querySelector("input")
+        let text = document.querySelector("button")
+        let container = document.querySelector(".item-list")
+        function Add(){
+            if(el.value !== ""){
+                let divv = document.createElement("div")
+                divv.innerHTML = el.value
+                container.append(divv)
+                el.value = ""
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
