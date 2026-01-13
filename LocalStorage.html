@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quod ipsam eos similique repellat dignissimos. Veniam voluptatum tempore atque ex, sequi doloribus quod aperiam! Ratione ut obcaecati libero repudiandae quia!</p>
+    <button onclick="ChangeTheme()">Click</button>
+    <button onclick="RemoveStorage()">RemoveStorage</button>
+    <script>
+        // used for entire user tab  
+
+        // let val = localStorage.getItem("Theme")
+        // if(val == "dark"){
+        //     document.body.style.backgroundColor = "black"
+        //     document.body.style.color = "white"
+        // }
+        // function ChangeTheme(){
+        //     document.body.style.backgroundColor = "black"
+        //     document.body.style.color = "white"
+        //     localStorage.setItem("Theme","dark")
+        // }
+
+        //session Storage only for used for particular tab
+        // let val = sessionStorage.getItem("Theme")
+        // if(val == "dark"){
+        //     document.body.style.backgroundColor = "black"
+        //     document.body.style.color = "white"
+        // }
+        // function ChangeTheme(){
+        //     document.body.style.backgroundColor = "black"
+        //     document.body.style.color = "white"
+        //     sessionStorage.setItem("Theme","dark")
+        // }
+        // function RemoveStorage(){
+        //     sessionStorage.removeItem("Theme")
+        // }
+
+        //cookies
+        // disappear after sometime automatically
+        let value = document.cookie
+        if(value.includes("theme=dark")){
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white"
+        }
+        function ChangeTheme(){
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white"
+            document.cookie = "theme=dark; max-age=10"
+        }
+        function RemoveStorage(){
+            document.cookie = "theme=; max-age=0"
+        }
+        
+    </script>
+</body>
+</html>

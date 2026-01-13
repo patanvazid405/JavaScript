@@ -30,6 +30,20 @@
         button:hover{
             cursor:grab;
         }
+
+        #img{
+            animation: spin 0.5s 5 ;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotateX(0deg);
+            }
+
+            100%{
+                transform: rotateX(360deg);
+            }
+            
+        }
     </style>
 </head>
 <body>
@@ -47,19 +61,28 @@
         let head = 0
         let toss = 0
 
-    
-
         function rand(){
         let rand =  Math.round(Math.random()*100)
         console.log(rand)
+        img.classList.remove("rotate-el")
+        void img.offsetWidth
+        img.classList.add("rotate-el")
         if (rand%2 ==0){
-            img.src = "https://romjee.com/cdn/shop/files/HEAD-TAIL-TOSSING-COIN-1.jpg?height=533&v=1718558075"
+            setTimeout(()=>{
+                img.classList = "rotate-el"
+                img.src = "https://romjee.com/cdn/shop/files/HEAD-TAIL-TOSSING-COIN-1.jpg?height=533&v=1718558075"
             head = head+1
+            },2000)
+            
             
         }
         else{
-            img.src = "https://romjee.com/cdn/shop/files/HEAD-TAIL-TOSSING-COIN.jpg?v=1718558075"
+            setTimeout(()=>{
+                img.classList = "rotate-el"
+                img.src = "https://romjee.com/cdn/shop/files/HEAD-TAIL-TOSSING-COIN.jpg?v=1718558075"
             toss = toss+1
+            },2000)
+            
         }
         para.textContent = "Heads: " + head + " Tails: " + toss
         }
