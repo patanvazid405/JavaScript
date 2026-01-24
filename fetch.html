@@ -6,16 +6,8 @@
     <title>Fetch Details</title>
 </head>
 <body>
-    <script>
-    fetch('https://fakestoreapi.com/products/category/electronics')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data[0])
-  let heading = document.createElement("h1")
-  heading.innerHTML = data[0].title
-  document.body.appendChild(heading)
-  });
-    </script>
+  
+    <script src="fetch/fetch.js"></script>
     
 </body>
 </html>

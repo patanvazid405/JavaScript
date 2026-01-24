@@ -1,2 +1,11 @@
-let {na:{followers:{indian:{Andhra:{count}}}}} = {na : {followers : {indian:{Andhra :{count: 200}}}}}
-console.log(count)
+function one(callback) {
+    setTimeout(() => {
+        console.log("payment done")
+        callback()
+    }, 1000)
+}
+
+function two() {
+    console.log("second")
+}
+one(two)
